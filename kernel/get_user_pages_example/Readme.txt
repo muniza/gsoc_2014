@@ -1,4 +1,4 @@
-In the root directory run
+To test the example, run
 make
 sudo insmod gu_page.ko
 
@@ -10,11 +10,11 @@ Should see "loaded the gu_page"
 
 You need to create a device file to talk
 to the char device. In the userspace dir
-mknod simpleuser c 42
+sudo mknod simpleuser c 42 0
 make
 
-Then run as root
-./userspace simpleuser
+Then run
+sudo ./userspace simpleuser
 
 Check the kernel messages for page addr
 tail /var/log/syslog
